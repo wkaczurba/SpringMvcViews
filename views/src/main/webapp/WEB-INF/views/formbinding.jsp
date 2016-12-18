@@ -13,10 +13,17 @@
 <h1>Form binding example</h1>
 
 <sf:form method="POST" commandName="user">
-  First name: <sf:input path="firstName" /><sf:errors path="firstName" cssClass="error"/> <br />
+  <sf:label path="firstName" cssErrorClass="error">First name</sf:label>: 
+    <sf:input path="firstName" cssErrorClass="error" /><br />
+  
+  <sf:label path="lastName" cssErrorClass="error">Last name</sf:label>:
+    <sf:input path="lastName" cssErrorClass="error"/><br />
+  
+  <sf:label path="email" cssErrorClass="error">Email</sf:label>:
+    <sf:input path="email" cssErrorClass="error"/><br />
+  
+  <br />  
   <sf:errors path="*" element="div" cssClass="errors" />   
-  Last name: <sf:input path="lastName" /><sf:errors path="lastName" cssClass="error"/><br />
-  Email: <sf:input path="email" /><sf:errors path="email" cssClass="error"/><br />
   
   <input type="submit" value="Register" />
   <!-- displaying all errors together -->

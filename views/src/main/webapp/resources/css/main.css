@@ -7,6 +7,14 @@ color: red;
 
 /* This one is for all errors */
 div.errors {
-background-color: #ffcccc;
+
 border: 2px solid red;
+}
+
+label.error {
+	color:red;
+}
+
+input.error {
+	background-color: #ffcccc;
 }
