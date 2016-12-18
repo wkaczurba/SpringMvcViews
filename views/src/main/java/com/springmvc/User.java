@@ -3,18 +3,20 @@ package com.springmvc;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
+
 public class User {
 	
 	@NotNull
-	@Size(min=5, max=16)
+	@Size(min=5, max=16, message="{firstName.size}")
 	private String firstName;
 	
 	@NotNull
-	@Size(min=5, max=25)
+	@Size(min=5, max=25, message="{lastName.size}")
 	private String lastName;
 	
 	@NotNull
-	@Size(min=6, max=30)
+	@Email(message="{email.valid}")
 	private String email;
 	
 	public User() {}
