@@ -1,9 +1,20 @@
 package com.springmvc;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class User {
 	
+	@NotNull
+	@Size(min=5, max=16)
 	private String firstName;
+	
+	@NotNull
+	@Size(min=5, max=25)
 	private String lastName;
+	
+	@NotNull
+	@Size(min=6, max=30)
 	private String email;
 	
 	public User() {}
@@ -36,5 +47,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}	
+	
+	// TODO: equals, hashCode
 	
 }

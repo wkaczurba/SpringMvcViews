@@ -2,8 +2,12 @@ package com.springmvc.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import static org.springframework.web.bind.annotation.RequestMethod.*;
+
+import javax.validation.Valid;
+
 import com.springmvc.User;
 
 @Controller
@@ -25,6 +29,17 @@ public class MainController {
 		
 		model.addAttribute(user);
 		return "formbinding";
+	}
+	
+	@RequestMapping(value="/formbinding", method=POST)
+	public String formProcessing(@Valid User user, Errors errors) {
+		if (errors.hasErrors())
+		{
+			return "formbinding";
+		}
+		// Save and do whatever...
+		
+		return "index";
 	}
 }
 

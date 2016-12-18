@@ -11,9 +11,10 @@
 <h1>Form binding example</h1>
 
 <sf:form method="POST" commandName="user">
-  First name: <sf:input path="firstName" /><br />
-  Last name: <sf:input path="lastName" /><br />
-  Email: <sf:input path="email" /><br />
+  First name: <sf:input path="firstName" /><sf:errors path="firstName"/> <br />
+  Last name: <sf:input path="lastName" /><sf:errors path="lastName"/><br />
+  Email: <sf:input path="email" /><sf:errors path="email"/><br />
+  
   <input type="submit" value="Register" />
 </sf:form>
 
