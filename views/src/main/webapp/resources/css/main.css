@@ -1,0 +1,12 @@
+h1{
+	color:red;
+}
+span.error {
+color: red;
+}
+
+/* This one is for all errors */
+div.errors {
+background-color: #ffcccc;
+border: 2px solid red;
+}
