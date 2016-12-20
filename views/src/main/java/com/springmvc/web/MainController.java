@@ -41,5 +41,10 @@ public class MainController {
 		
 		return "index";
 	}
+	
+	@RequestMapping(value="/springtags", method=GET)
+	public String springTags() {
+		return "springtags";
+	}
 }
 

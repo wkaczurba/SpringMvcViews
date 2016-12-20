@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,10 +8,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Index...</h2>
-TODO: Sort out these links
-<a href="<c:url value="/formbinding" />">formbinding</a><br />
-<a href="<c:url value="/hello" />">hello</a><br />
+<h1><s:message code="index.welcome" /></h1>
+
+<ul>
+  <li><a href="<s:url value="/formbinding" />">formbinding</a></li>
+  <li><a href="<s:url value="/hello" />">hello</a></li>
+  <li><a href="<s:url value="/springtags"/>">springtags</a></li>
+</ul>
+<hr>
+
+<b>Select language:</b>
+<a href="?language=en">English</a> | <a href="?language=pl">Polski</a> 
+
 
 </body>
 </html>
